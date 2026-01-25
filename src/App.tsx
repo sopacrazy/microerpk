@@ -12,7 +12,6 @@ import {
   ArrowRight,
   Search,
   ShoppingCart,
-  Menu,
   X,
   Plus,
   Trash2,
