@@ -40,7 +40,7 @@ function App() {
             <a href="#features" className="hover:text-brand-600 transition-colors">Funcionalidades</a>
             <a href="#benefits" className="hover:text-brand-600 transition-colors">Vantagens</a>
             <a 
-              href="https://pay.hotmart.com/J104079358Y"
+              href="https://pay.kiwify.com.br/a61mlFc"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-brand-600 hover:bg-brand-700 text-white px-6 py-2 rounded-full transition-all flex items-center gap-2 group shadow-lg shadow-brand-500/30"
@@ -104,7 +104,7 @@ function App() {
                 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
                   <a 
-                    href="https://pay.hotmart.com/J104079358Y"
+                    href="https://pay.kiwify.com.br/a61mlFc"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-xl shadow-green-500/20 hover:shadow-2xl hover:scale-105 flex items-center justify-center gap-2"
@@ -275,7 +275,7 @@ function App() {
               </p>
               <div className="flex justify-center gap-4">
                  <a 
-                   href="https://pay.hotmart.com/J104079358Y"
+                   href="https://pay.kiwify.com.br/a61mlFc"
                    target="_blank"
                    rel="noopener noreferrer"
                    className="bg-white text-green-600 hover:bg-slate-50 px-10 py-5 rounded-xl text-lg font-bold transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 inline-flex items-center gap-2"
