@@ -23,27 +23,27 @@ function App() {
   const [showDemo, setShowDemo] = useState(false);
 
   return (
-    <div className="min-h-screen bg-white text-slate-900 overflow-x-hidden selection:bg-brand-500/30">
+    <div className="min-h-screen bg-slate-50 text-slate-900 overflow-x-hidden selection:bg-brand-500/30 font-sans">
       
       {/* Navigation */}
       <nav className="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="bg-brand-600 p-2 rounded-lg">
+            <div className="bg-brand-600 p-2.5 rounded-xl shadow-lg shadow-brand-600/20">
               <Store className="w-6 h-6 text-white" />
             </div>
-            <span className="text-xl font-bold text-slate-900">
+            <span className="text-xl font-display font-bold text-slate-900 tracking-tight">
               MicroERP Varejo
             </span>
           </div>
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
-            <a href="#features" className="hover:text-brand-600 transition-colors">Funcionalidades</a>
-            <a href="#benefits" className="hover:text-brand-600 transition-colors">Vantagens</a>
+            <a href="#features" className="hover:text-brand-600 transition-colors font-medium">Funcionalidades</a>
+            <a href="#benefits" className="hover:text-brand-600 transition-colors font-medium">Vantagens</a>
             <a 
               href="https://pay.kiwify.com.br/a61mlFc"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-brand-600 hover:bg-brand-700 text-white px-6 py-2 rounded-full transition-all flex items-center gap-2 group shadow-lg shadow-brand-500/30"
+              className="bg-brand-600 hover:bg-brand-700 text-white px-8 py-3 rounded-full transition-all flex items-center gap-2 group shadow-xl shadow-brand-500/20 hover:shadow-brand-500/40 hover:-translate-y-0.5 font-medium"
             >
               Comprar Agora
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -57,7 +57,7 @@ function App() {
       ) : (
         <>
           {/* Hero Section */}
-          <section className="pt-32 pb-20 relative px-6 overflow-hidden">
+          <section className="pt-40 pb-32 relative px-6 overflow-hidden">
             <div className="absolute top-0 right-0 -translate-y-12 translate-x-1/2 w-[800px] h-[800px] bg-brand-50/50 rounded-full blur-3xl -z-10" />
             <div className="absolute bottom-0 left-0 translate-y-24 -translate-x-1/3 w-[600px] h-[600px] bg-indigo-50/50 rounded-full blur-3xl -z-10" />
             
@@ -72,23 +72,23 @@ function App() {
                   <span className="text-sm font-medium text-brand-700">Sistema completo para seu negócio</span>
                 </div>
                 
-                <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6 text-slate-900 tracking-tight">
+                <h1 className="text-5xl md:text-7xl font-display font-extrabold leading-[1.1] mb-8 text-slate-900 tracking-tight">
                   Controle total da sua loja <br />
-                  <span className="text-brand-600">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-brand-400">
                     simples e eficiente.
                   </span>
                 </h1>
 
                 {/* Price Highlight */}
-                <div className="flex justify-center mb-8">
-                  <div className="bg-emerald-50 border border-emerald-100 rounded-2xl p-4 flex flex-col items-center shadow-lg shadow-emerald-500/10 transform hover:scale-105 transition-transform duration-300">
-                     <span className="text-slate-500 text-sm font-medium uppercase tracking-wide mb-1">Oferta Especial</span>
-                     <div className="flex items-end gap-2 text-emerald-600 mb-1">
-                       <span className="text-2xl font-bold mb-1">R$</span>
-                       <span className="text-6xl font-black tracking-tighter">120</span>
-                       <span className="text-xl font-bold mb-1">,00</span>
+                <div className="flex justify-center mb-10">
+                  <div className="bg-white/60 backdrop-blur-xl border border-emerald-100/50 rounded-3xl p-6 flex flex-col items-center shadow-2xl shadow-emerald-900/5 transform hover:scale-105 transition-transform duration-500">
+                     <span className="text-slate-500 text-sm font-bold uppercase tracking-wider mb-2">Oferta Especial</span>
+                     <div className="flex items-end gap-2 text-emerald-600 mb-2">
+                       <span className="text-3xl font-bold mb-2">R$</span>
+                       <span className="text-7xl font-display font-extrabold tracking-tighter">120</span>
+                       <span className="text-2xl font-bold mb-2">,00</span>
                      </div>
-                     <span className="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                     <span className="bg-emerald-100/80 text-emerald-800 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider">
                        Pagamento Único
                      </span>
                   </div>
@@ -107,14 +107,14 @@ function App() {
                     href="https://pay.kiwify.com.br/a61mlFc"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-xl shadow-green-500/20 hover:shadow-2xl hover:scale-105 flex items-center justify-center gap-2"
+                    className="w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-2xl text-lg font-bold transition-all shadow-xl shadow-green-500/20 hover:shadow-2xl hover:shadow-green-500/30 hover:-translate-y-1 flex items-center justify-center gap-2"
                   >
                     <ShoppingCart className="w-6 h-6" />
                     Comprar Agora
                   </a>
                   <button 
                     onClick={() => setShowDemo(true)}
-                    className="w-full sm:w-auto bg-brand-600 hover:bg-brand-700 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all border border-transparent shadow-lg shadow-brand-600/20 hover:shadow-xl flex items-center justify-center gap-2"
+                    className="w-full sm:w-auto bg-white text-slate-700 hover:text-brand-600 px-8 py-4 rounded-2xl text-lg font-bold transition-all border border-slate-200 hover:border-brand-200 shadow-lg shadow-slate-200/50 hover:shadow-xl hover:-translate-y-1 flex items-center justify-center gap-2"
                   >
                     <Zap className="w-5 h-5 fill-current" />
                     Testar Grátis
@@ -127,7 +127,7 @@ function App() {
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
-                className="relative mx-auto max-w-6xl shadow-2xl rounded-2xl overflow-hidden border border-slate-200"
+                className="relative mx-auto max-w-6xl shadow-2xl shadow-brand-900/10 rounded-3xl overflow-hidden border border-slate-200/60 bg-white"
               >
                <div className="bg-slate-100 p-2 border-b border-slate-200 flex gap-2">
                  <div className="w-3 h-3 rounded-full bg-red-400"></div>
@@ -171,10 +171,10 @@ function App() {
           </section>
 
           {/* Features Grid */}
-          <section id="features" className="py-24 relative overflow-hidden bg-white">
+          <section id="features" className="py-32 relative overflow-hidden bg-white">
             <div className="container mx-auto px-6">
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-5xl font-bold mb-6 text-slate-900">Tudo que você precisa</h2>
+                <h2 className="text-3xl md:text-5xl font-display font-bold mb-6 text-slate-900">Tudo que você precisa</h2>
                 <p className="text-slate-600 max-w-2xl mx-auto text-lg">
                   Simplificamos a gestão para você focar em vender.
                 </p>
@@ -216,12 +216,13 @@ function App() {
           </section>
 
           {/* Stats Section */}
-          <section className="py-24 bg-slate-50">
+          <section className="py-32 bg-slate-50 relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
             <div className="container mx-auto px-6">
               <div className="grid md:grid-cols-2 gap-16 items-center">
                 <div>
-                  <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-900">
-                    Otimize seu tempo e maximize seus lucros
+                  <h2 className="text-3xl md:text-5xl font-display font-bold mb-8 text-slate-900 leading-tight">
+                    Otimize seu tempo e <br/><span className="text-brand-600">maximize seus lucros</span>
                   </h2>
                   <div className="space-y-6">
                     {[
@@ -232,7 +233,7 @@ function App() {
                       "Sem mensalidades - Pagamento Único"
                     ].map((item, i) => (
                       <div key={i} className="flex items-center gap-4">
-                        <div className="bg-brand-100 p-2 rounded-full">
+                        <div className="bg-brand-100 p-1 rounded-full">
                           <CheckCircle2 className="w-5 h-5 text-brand-600" />
                         </div>
                         <span className="text-lg text-slate-700">{item}</span>
@@ -244,17 +245,17 @@ function App() {
                   <div className="absolute inset-0 bg-brand-200 blur-[100px] rounded-full opacity-50" />
                   <div className="relative bg-white border border-slate-100 p-8 rounded-2xl shadow-xl">
                     <div className="grid grid-cols-2 gap-6">
-                      <div className="p-4 bg-slate-50 rounded-xl border border-slate-100 text-center">
-                        <div className="text-4xl font-bold text-brand-600 mb-2">30%</div>
-                        <div className="text-sm text-slate-500">Mais Vendas</div>
+                      <div className="p-6 bg-slate-50/50 rounded-2xl border border-slate-100 text-center hover:bg-white transition-colors">
+                        <div className="text-5xl font-display font-bold text-brand-600 mb-2">30%</div>
+                        <div className="text-sm font-bold text-slate-500 uppercase tracking-wide">Mais Vendas</div>
                       </div>
-                      <div className="p-4 bg-slate-50 rounded-xl border border-slate-100 text-center">
-                        <div className="text-4xl font-bold text-emerald-500 mb-2">2h</div>
-                        <div className="text-sm text-slate-500">Economia Diária</div>
+                      <div className="p-6 bg-slate-50/50 rounded-2xl border border-slate-100 text-center hover:bg-white transition-colors">
+                        <div className="text-5xl font-display font-bold text-emerald-500 mb-2">2h</div>
+                        <div className="text-sm font-bold text-slate-500 uppercase tracking-wide">Economia Diária</div>
                       </div>
-                      <div className="p-4 bg-slate-50 rounded-xl border border-slate-100 text-center col-span-2">
-                        <div className="text-4xl font-bold text-indigo-500 mb-2">100%</div>
-                        <div className="text-sm text-slate-500">Controle Financeiro</div>
+                      <div className="p-6 bg-slate-50/50 rounded-2xl border border-slate-100 text-center col-span-2 hover:bg-white transition-colors">
+                        <div className="text-5xl font-display font-bold text-indigo-500 mb-2">100%</div>
+                        <div className="text-sm font-bold text-slate-500 uppercase tracking-wide">Controle Financeiro</div>
                       </div>
                     </div>
                   </div>
@@ -264,10 +265,10 @@ function App() {
           </section>
 
           {/* CTA */}
-          <section className="py-24 relative overflow-hidden bg-brand-600">
+          <section className="py-32 relative overflow-hidden bg-brand-600">
             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10" />
             <div className="container mx-auto px-6 text-center relative z-10 text-white">
-              <h2 className="text-4xl md:text-5xl font-bold mb-8">
+              <h2 className="text-4xl md:text-6xl font-display font-black mb-8 tracking-tight">
                 Pronto para transformar sua loja?
               </h2>
               <p className="text-xl text-brand-100 mb-10 max-w-2xl mx-auto">
@@ -278,7 +279,7 @@ function App() {
                    href="https://pay.kiwify.com.br/a61mlFc"
                    target="_blank"
                    rel="noopener noreferrer"
-                   className="bg-white text-green-600 hover:bg-slate-50 px-10 py-5 rounded-xl text-lg font-bold transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 inline-flex items-center gap-2"
+                   className="bg-white text-brand-600 hover:bg-slate-50 px-10 py-5 rounded-2xl text-xl font-bold transition-all shadow-xl shadow-brand-900/20 hover:shadow-2xl hover:shadow-brand-900/30 hover:-translate-y-1 inline-flex items-center gap-2"
                  >
                    <CheckCircle2 className="w-5 h-5" />
                    Garantir Minha Cópia
@@ -291,14 +292,14 @@ function App() {
           </section>
 
           {/* Footer */}
-          <footer className="bg-slate-50 border-t border-slate-200 py-12">
+          <footer className="bg-slate-50 border-t border-slate-200 py-16">
             <div className="container mx-auto px-6">
               <div className="flex flex-col md:flex-row justify-between items-center gap-6">
                 <div className="flex items-center gap-2">
                   <div className="bg-brand-600 p-1.5 rounded-lg">
                     <Store className="w-5 h-5 text-white" />
                   </div>
-                  <span className="text-xl font-bold text-slate-800">MicroERP</span>
+                  <span className="text-xl font-display font-bold text-slate-800">MicroERP</span>
                 </div>
                 <div className="flex gap-8 text-sm text-slate-500">
                   <a href="#" className="hover:text-brand-600 transition-colors">Termos</a>
@@ -319,14 +320,15 @@ function App() {
 
 function FeatureCard({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) {
   return (
-    <div className="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-brand-200 transition-all hover:-translate-y-1 hover:shadow-lg group">
-      <div className="bg-white shadow w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+    <div className="p-8 rounded-3xl bg-white border border-slate-100/60 shadow-sm hover:shadow-xl hover:shadow-slate-200/40 transition-all hover:-translate-y-1 group relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-24 h-24 bg-brand-50 rounded-bl-full -mr-4 -mt-4 opacity-50 group-hover:scale-110 transition-transform" />
+      <div className="bg-brand-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 relative z-10">
         <div className="text-brand-600">
-          {React.cloneElement(icon as React.ReactElement<{ size?: number }>, { size: 28 })}
+          {React.cloneElement(icon as React.ReactElement<{ size?: number }>, { size: 32 })}
         </div>
       </div>
-      <h3 className="text-xl font-bold mb-4 text-slate-900 group-hover:text-brand-700 transition-colors">{title}</h3>
-      <p className="text-slate-600 leading-relaxed">
+      <h3 className="text-xl font-display font-bold mb-4 text-slate-900 group-hover:text-brand-600 transition-colors relative z-10">{title}</h3>
+      <p className="text-slate-600 leading-relaxed relative z-10">
         {description}
       </p>
     </div>
